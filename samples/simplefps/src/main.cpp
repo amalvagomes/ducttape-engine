@@ -36,8 +36,7 @@ public:
             mRuntime += std::dynamic_pointer_cast<dt::BeginFrameEvent>(e)->GetFrameTime();
             //update camera position
             camnode->SetPosition(Ogre::Vector3(spherenode->GetPosition().x, spherenode->GetPosition().y+3, spherenode->GetPosition().z-5));
-            const std::string camstr("cam");
-            camnode->FindComponent<dt::CameraComponent>(camstr)->LookAt(spherenode->GetPosition());
+            camnode->FindComponent<dt::CameraComponent>(QString("cam"))->LookAt(spherenode->GetPosition());
         }
     }
 
